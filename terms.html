@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service | Lylo</title>
+    <style>
+      :root {
+        --bg-1: #f3f7ff;
+        --bg-2: #eaf1ff;
+        --bg-3: #e0ebff;
+        --panel: rgba(255,255,255,0.94);
+        --panel-soft: rgba(244,248,255,0.9);
+        --primary: #5a8ef8;
+        --primary-strong: #3d6fe2;
+        --primary-soft: rgba(90,142,248,0.14);
+        --text: #1e2b3a;
+        --muted: #586a86;
+        --line: rgba(88,110,147,0.18);
+        --shadow: rgba(88,110,147,0.14);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg-1), var(--bg-2) 42%, var(--bg-3));
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 60px auto;
+        padding: 28px 28px 24px;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: 0 18px 40px var(--shadow);
+      }
+
+      .lang-switch {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+
+      .flag-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid rgba(55, 106, 216, 0.18);
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      .flag-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+      }
+
+      .flag-btn.active {
+        border-color: var(--primary-strong);
+        box-shadow: 0 0 0 3px rgba(90, 142, 248, 0.18);
+      }
+
+      .flag-btn img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+
+      .brand-image {
+        width: 92px;
+        height: 92px;
+        border-radius: 22px;
+        object-fit: cover;
+        border: 2px solid rgba(55, 106, 216, 0.18);
+        box-shadow: 0 12px 28px rgba(88, 110, 147, 0.18);
+        background: #fff;
+      }
+
+      .badge {
+        display: inline-block;
+        padding: 7px 14px;
+        background: var(--primary-soft);
+        border: 1px solid rgba(90, 142, 248, 0.2);
+        border-radius: 999px;
+        color: var(--primary-strong);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 4vw, 3rem);
+        line-height: 1.1;
+        color: #1d2d3f;
+      }
+
+      h2 {
+        font-size: 1.28rem;
+        margin-top: 34px;
+        margin-bottom: 12px;
+        color: #1e2d3f;
+      }
+
+      p, li {
+        color: var(--text);
+        font-size: 1rem;
+      }
+
+      ul, ol {
+        padding-left: 22px;
+      }
+
+      .muted { color: var(--muted); }
+
+      .notice {
+        background: var(--panel-soft);
+        border: 1px solid var(--line);
+        border-left: 4px solid var(--primary);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin: 26px 0;
+        color: #33475f;
+      }
+
+      .footer {
+        margin-top: 32px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          margin: 24px 16px;
+          padding: 24px 18px 18px;
+        }
+
+        .topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="lang-switch" aria-label="Language switcher">
+        <button class="flag-btn active" data-lang="es" aria-label="Cambiar a español">
+          <img src="https://flagcdn.com/w80/es.png" alt="España" />
+        </button>
+        <button class="flag-btn" data-lang="en" aria-label="Switch to English">
+          <img src="https://flagcdn.com/w80/gb.png" alt="England" />
+        </button>
+      </div>
+
+      <div class="topbar">
+        <img class="brand-image" src="bot-image.png" alt="Logo del bot Lylo" />
+        <div>
+          <div class="badge" data-i18n="badge">Términos de Servicio</div>
+          <h1 data-i18n="title">Lylo</h1>
+        </div>
+      </div>
+
+      <p class="muted" data-i18n="updated">Última actualización: 17 de septiembre de 2026</p>
+
+      <div class="notice" data-i18n="intro">
+        Estos términos describen el uso del bot de Discord Lylo. Al invitarlo a tu servidor o usarlo, aceptas estas condiciones.
+      </div>
+
+      <h2 data-i18n="sec1_title">1. Aceptación de los términos</h2>
+      <p data-i18n="sec1_text">
+        Al usar Lylo en cualquier servidor de Discord, aceptas estos Términos de Servicio y confirmas que tendrás la autoridad
+        adecuada para usar el bot dentro de ese servidor.
+      </p>
+
+      <h2 data-i18n="sec2_title">2. Uso permitido</h2>
+      <p data-i18n="sec2_text">Puedes usar Lylo para funciones autorizadas como:</p>
+      <ul>
+        <li data-i18n="li1">Moderación y gestión del servidor.</li>
+        <li data-i18n="li2">Automatización de tareas y comandos útiles.</li>
+        <li data-i18n="li3">Herramientas de entretenimiento, notificaciones y utilidad.</li>
+        <li data-i18n="li4">Ayuda administrativa para miembros del servidor.</li>
+      </ul>
+
+      <p data-i18n="sec2_note">No puedes usar Lylo para actividades ilegales, abusivas, dañinas, spam, phishing, fraude o acoso.</p>
+
+      <h2 data-i18n="sec3_title">3. Responsabilidad del usuario</h2>
+      <p data-i18n="sec3_text">
+        El usuario y los administradores del servidor son responsables del uso correcto del bot dentro de su comunidad.
+        Debes cumplir con las reglas de Discord y con las normas del servidor donde se utiliza.
+      </p>
+
+      <h2 data-i18n="sec4_title">4. Disponibilidad del servicio</h2>
+      <p data-i18n="sec4_text">
+        Lylo puede actualizarse, reiniciarse o dejar de estar disponible temporalmente por mantenimiento, cambios técnicos o razones operativas.
+        No garantizamos disponibilidad continua ni tiempo de actividad perfecto.
+      </p>
+
+      <h2 data-i18n="sec5_title">5. Propiedad intelectual</h2>
+      <p data-i18n="sec5_text">
+        El bot, su código, diseño, nombre, marca y contenido asociado son propiedad del desarrollador o de las personas autorizadas para su uso.
+        No se permite copiar, redistribuir o reutilizar el bot sin permiso.
+      </p>
+
+      <h2 data-i18n="sec6_title">6. Limitación de responsabilidad</h2>
+      <p data-i18n="sec6_text">
+        Lylo se proporciona "tal cual". No garantizamos que el servicio esté libre de errores, interrupciones o fallos.
+        No somos responsables por daños indirectos, pérdidas de datos o consecuencias derivadas del uso del bot.
+      </p>
+
+      <h2 data-i18n="sec7_title">7. Suspensión o eliminación</h2>
+      <p data-i18n="sec7_text">
+        Podemos suspender, limitar o retirar el acceso al bot si se detecta uso indebido, abuso, infracción a estas condiciones o riesgo para la seguridad del servicio.
+      </p>
+
+      <h2 data-i18n="sec8_title">8. Cambios en estos términos</h2>
+      <p data-i18n="sec8_text">
+        Podemos actualizar estos Términos de Servicio en cualquier momento. El uso continuo del bot después de cambios significativos
+        implica la aceptación de las nuevas condiciones.
+      </p>
+
+      <h2 data-i18n="sec9_title">9. Contacto</h2>
+      <p data-i18n="sec9_text">
+        Si tienes dudas, consultas o necesitas soporte, puedes contactar con el desarrollador o administrador del bot a través de los canales oficiales indicados por Lylo.
+      </p>
+
+      <div class="footer" data-i18n="footer">
+        Lylo no es responsable del contenido generado por terceros dentro de servidores de Discord y cada servidor debe cumplir con sus propias reglas y políticas.
+      </div>
+    </div>
+
+    <script>
+      const translations = {
+        es: {
+          badge: 'Términos de Servicio',
+          title: 'Lylo',
+          updated: 'Última actualización: 17 de septiembre de 2026',
+          intro: 'Estos términos describen el uso del bot de Discord Lylo. Al invitarlo a tu servidor o usarlo, aceptas estas condiciones.',
+          sec1_title: '1. Aceptación de los términos',
+          sec1_text: 'Al usar Lylo en cualquier servidor de Discord, aceptas estos Términos de Servicio y confirmas que tendrás la autoridad adecuada para usar el bot dentro de ese servidor.',
+          sec2_title: '2. Uso permitido',
+          sec2_text: 'Puedes usar Lylo para funciones autorizadas como:',
+          li1: 'Moderación y gestión del servidor.',
+          li2: 'Automatización de tareas y comandos útiles.',
+          li3: 'Herramientas de entretenimiento, notificaciones y utilidad.',
+          li4: 'Ayuda administrativa para miembros del servidor.',
+          sec2_note: 'No puedes usar Lylo para actividades ilegales, abusivas, dañinas, spam, phishing, fraude o acoso.',
+          sec3_title: '3. Responsabilidad del usuario',
+          sec3_text: 'El usuario y los administradores del servidor son responsables del uso correcto del bot dentro de su comunidad. Debes cumplir con las reglas de Discord y con las normas del servidor donde se utiliza.',
+          sec4_title: '4. Disponibilidad del servicio',
+          sec4_text: 'Lylo puede actualizarse, reiniciarse o dejar de estar disponible temporalmente por mantenimiento, cambios técnicos o razones operativas. No garantizamos disponibilidad continua ni tiempo de actividad perfecto.',
+          sec5_title: '5. Propiedad intelectual',
+          sec5_text: 'El bot, su código, diseño, nombre, marca y contenido asociado son propiedad del desarrollador o de las personas autorizadas para su uso. No se permite copiar, redistribuir o reutilizar el bot sin permiso.',
+          sec6_title: '6. Limitación de responsabilidad',
+          sec6_text: 'Lylo se proporciona "tal cual". No garantizamos que el servicio esté libre de errores, interrupciones o fallos. No somos responsables por daños indirectos, pérdidas de datos o consecuencias derivadas del uso del bot.',
+          sec7_title: '7. Suspensión o eliminación',
+          sec7_text: 'Podemos suspender, limitar o retirar el acceso al bot si se detecta uso indebido, abuso, infracción a estas condiciones o riesgo para la seguridad del servicio.',
+          sec8_title: '8. Cambios en estos términos',
+          sec8_text: 'Podemos actualizar estos Términos de Servicio en cualquier momento. El uso continuo del bot después de cambios significativos implica la aceptación de las nuevas condiciones.',
+          sec9_title: '9. Contacto',
+          sec9_text: 'Si tienes dudas, consultas o necesitas soporte, puedes contactar con el desarrollador o administrador del bot a través de los canales oficiales indicados por Lylo.',
+          footer: 'Lylo no es responsable del contenido generado por terceros dentro de servidores de Discord y cada servidor debe cumplir con sus propias reglas y políticas.'
+        },
+        en: {
+          badge: 'Terms of Service',
+          title: 'Lylo',
+          updated: 'Last updated: September 17, 2026',
+          intro: 'These terms describe the use of the Discord bot Lylo. By inviting it to your server or using it, you accept these conditions.',
+          sec1_title: '1. Acceptance of terms',
+          sec1_text: 'By using Lylo on any Discord server, you accept these Terms of Service and confirm that you have the proper authority to use the bot within that server.',
+          sec2_title: '2. Permitted use',
+          sec2_text: 'You may use Lylo for authorized functions such as:',
+          li1: 'Server moderation and management.',
+          li2: 'Automation of tasks and useful commands.',
+          li3: 'Entertainment, notifications, and utility tools.',
+          li4: 'Administrative support for server members.',
+          sec2_note: 'You may not use Lylo for illegal, abusive, harmful, spam, phishing, fraud, or harassment activities.',
+          sec3_title: '3. User responsibility',
+          sec3_text: 'The user and server administrators are responsible for the correct use of the bot within their community. You must comply with Discord rules and the server rules where the bot is used.',
+          sec4_title: '4. Service availability',
+          sec4_text: 'Lylo may be updated, restarted, or temporarily unavailable due to maintenance, technical changes, or operational reasons. We do not guarantee continuous availability or perfect uptime.',
+          sec5_title: '5. Intellectual property',
+          sec5_text: 'The bot, its code, design, name, brand, and associated content are the property of the developer or authorized persons. Copying, redistributing, or reusing the bot without permission is not allowed.',
+          sec6_title: '6. Limitation of liability',
+          sec6_text: 'Lylo is provided "as is". We do not guarantee that the service is free from errors, interruptions, or failures. We are not responsible for indirect damages, data loss, or consequences arising from the use of the bot.',
+          sec7_title: '7. Suspension or removal',
+          sec7_text: 'We may suspend, limit, or revoke access to the bot if misuse, abuse, violation of these conditions, or risk to service security is detected.',
+          sec8_title: '8. Changes to these terms',
+          sec8_text: 'We may update these Terms of Service at any time. Continued use of the bot after significant changes implies acceptance of the new conditions.',
+          sec9_title: '9. Contact',
+          sec9_text: 'If you have questions, requests, or need support, you can contact the developer or bot administrator through the official channels indicated by Lylo.',
+          footer: 'Lylo is not responsible for third-party content generated within Discord servers, and each server must comply with its own rules and policies.'
+        }
+      };
+
+      const setLanguage = (lang) => {
+        document.documentElement.lang = lang;
+        const keys = document.querySelectorAll('[data-i18n]');
+        keys.forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+        });
+
+        document.querySelectorAll('.flag-btn').forEach((btn) => {
+          btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+      };
+
+      document.querySelectorAll('.flag-btn').forEach((btn) => {
+        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+      });
+    </script>
+  </body>
+</html>
